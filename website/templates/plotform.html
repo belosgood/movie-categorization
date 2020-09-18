@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Porn or RomCom</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+{% from "_formhelpers.html" import render_field %}
+
+<div>Enter plot description for a movie</div>
+<form method=post action="/results">
+
+  <dl>
+	  {{ render_field(form.movieplot) }}
+  </dl>
+
+  <input type=submit value='Submit' name='submit_btn'>
+
+</form>
+
+  </body>
+</html>
